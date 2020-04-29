@@ -16,4 +16,7 @@
     <mappers>
         <mapper resource="mapper/XTestMapper.xml"/>
     </mappers>
+<!--    <typeHandlers>-->
+<!--        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="java.math.RoundingMode"/>-->
+<!--    </typeHandlers>-->
 </configuration>

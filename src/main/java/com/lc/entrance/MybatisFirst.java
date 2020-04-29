@@ -25,7 +25,9 @@ public class MybatisFirst {
             SqlSession session = sqlMapper.openSession();
             try {
                 XTest xTest = session.selectOne("com.lc.access.XTestMapper.getObj", 1);
-                System.out.println(xTest.getName() + "," + xTest.getAge());
+                XTest xTest2 = session.selectOne("com.lc.access.XTestMapper.checkObj", "1 or 1 = 1");
+                System.out.println(xTest.getId() + ", "+ xTest.getName() + ", " + xTest.getAge() + ", " + xTest.getMoney());
+                System.out.println(xTest2.getId() + ", "+ xTest2.getName() + ", " + xTest2.getAge() + ", " + xTest2.getMoney());
             } finally {
                 session.close();
             }

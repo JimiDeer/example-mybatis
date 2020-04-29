@@ -2,10 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lc.access.XTestMapper">
-    <resultMap id="" type="">
-        <result jdbcType="" column="" javaType="" property="s"/>
+    <resultMap id="BaseResult" type="com.lc.model.XTest">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR"  property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="money" jdbcType="DOUBLE" property="money"/>
     </resultMap>
-    <select id="getObj" parameterType="int" resultType="com.lc.model.XTest">
-        select id,name,age from xx_test where id = #{id}
+    <select id="getObj" parameterType="int" resultMap="BaseResult">
+        select id,name,age,money from xx_test where id = #{id}
     </select>
 </mapper>
