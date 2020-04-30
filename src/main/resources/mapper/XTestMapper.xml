@@ -8,7 +8,7 @@
         <result column="age" jdbcType="INTEGER" property="age"/>
         <result column="money" jdbcType="DOUBLE" property="money"/>
     </resultMap>
-    <select id="getObj" parameterType="int" resultMap="BaseResult">
+    <select id="getObj" parameterType="string" resultMap="BaseResult">
         select id,name,age,money from xx_test where id = #{id}
     </select>
 </mapper>
